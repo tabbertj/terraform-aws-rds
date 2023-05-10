@@ -1,3 +1,7 @@
+variable "region" {
+  description = "AWS region to deploy resources to"
+}
+
 variable "db_name" {
   description = "Unique name to assign to RDS instance"
 }
