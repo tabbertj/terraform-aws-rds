@@ -49,7 +49,7 @@ resource "aws_security_group" "rds" {
 }
 
 resource "aws_db_parameter_group" "education" {
-  name   = "education"
+  name   = var.db_parameter_group_name
   family = "postgres14"
 
   parameter {
