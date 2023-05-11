@@ -2,6 +2,10 @@ variable "region" {
   description = "AWS region to deploy resources to"
 }
 
+variable "db_parameter_group_name" {
+  description = "The name of the DB parameter group. If omitted, Terraform will assign a random, unique name."
+}
+
 variable "db_name" {
   description = "Unique name to assign to RDS instance"
 }
