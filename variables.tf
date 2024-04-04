@@ -14,3 +14,8 @@ variable "db_password" {
   description = "RDS root user password"
   sensitive   = true
 }
+
+variable "publicly_accessible" {
+  description = "RDS instance is publicly_accessible "
+  default   = false
+}
