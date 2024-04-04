@@ -17,5 +17,4 @@ variable "db_password" {
 
 variable "publicly_accessible" {
   description = "RDS instance is publicly_accessible "
-  default   = false
 }
