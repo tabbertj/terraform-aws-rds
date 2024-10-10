@@ -6,7 +6,7 @@ data "aws_availability_zones" "available" {}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.77.0"
+  version = "5.13.0"
 
   name                 = "dademo-${random_pet.random.id}"
   cidr                 = "10.0.0.0/16"
@@ -77,4 +77,16 @@ resource "aws_db_instance" "demo" {
   parameter_group_name   = aws_db_parameter_group.demo.name
   publicly_accessible    = var.publicly_accessible
   skip_final_snapshot    = true
+}
+
+module "vpc_endpoints_nocreate" {
+
+  source = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
+
+  version = "5.13.0"
+
+ 
+
+  create = false
+
 }
