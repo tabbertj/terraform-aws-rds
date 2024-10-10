@@ -79,14 +79,8 @@ resource "aws_db_instance" "demo" {
   skip_final_snapshot    = true
 }
 
-module "vpc_endpoints_nocreate" {
-
-  source = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
-
+module "vpc_vpc-endpoints" {
+  source  = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
   version = "5.13.0"
-
- 
-
-  create = false
-
+  create = "true"
 }
